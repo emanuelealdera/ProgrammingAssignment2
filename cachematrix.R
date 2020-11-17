@@ -3,6 +3,7 @@
 #will be set to NULL
 #it return a list of functions that can be used to set/get the matrix itself and 
 #its inverse
+
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
   set <- function(y) {
@@ -14,8 +15,6 @@ makeCacheMatrix <- function(x = matrix()) {
   get_inverse <- function() inverse
   list(set = set, get = get, get_inverse = get_inverse, set_inverse = set_inverse)
 }
-
-
 ## This functions solves the inverse for the matrix created with the function above
 # If the value of the inverse is already cached, it retrieves that information, 
 #else it calculates it and stores in cache
